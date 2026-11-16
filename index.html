@@ -7,7 +7,8 @@
 <title>FXP V5｜功能与运营模式</title>
 <style>
 :root{--ink:#18352e;--muted:#617169;--green:#176447;--paper:#f6f5ef;--line:#dce2d7}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}a{color:inherit}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid #b8762f;outline-offset:4px}header{position:sticky;top:0;z-index:5;background:#f6f5eff5;border-bottom:1px solid var(--line)}.top{max-width:1080px;margin:auto;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:800;font-size:23px;text-decoration:none}.brand span{font-weight:400;color:var(--green)}.actions{display:flex;gap:8px}button{border:1px solid var(--line);border-radius:6px;padding:7px 12px;background:white;color:var(--ink);font-size:13px}button.primary{background:var(--green);border-color:var(--green);color:white}main{max-width:1032px;padding:0 24px;margin:auto}.hero{padding:52px 0 30px}.label{font-size:12px;color:var(--green);letter-spacing:1px}.hero h1{font-size:clamp(32px,5vw,52px);line-height:1.3;letter-spacing:-1px;margin:14px 0}.hero p{color:var(--muted);font-size:18px;margin:0}.meta{font-size:12px;color:var(--muted);margin-top:20px}.nav{display:flex;gap:25px;overflow-x:auto;white-space:nowrap;border-block:1px solid var(--line);padding:15px 0}.nav a{font-size:14px;text-decoration:none}.nav a:hover{color:var(--green)}section{padding:34px 0;border-bottom:1px solid var(--line)}h2{font-size:25px;margin:0 0 20px;line-height:1.4}h2 small{font-size:13px;color:var(--green);font-weight:400;margin-right:13px}h3{font-size:17px;margin:0 0 9px}p{margin:0 0 12px}.sub{font-size:14px;color:var(--muted)}.flow{background:var(--ink);color:#fff;border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:23px;margin-bottom:20px}.flow span{font-weight:600}.flow b{font-weight:400;color:#9fbea9}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{background:white;border:1px solid var(--line);border-radius:10px;padding:22px;min-width:0}.card p{font-size:14px;color:var(--muted);margin:0}.table-wrap{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:white}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:12px 18px;border-bottom:1px solid var(--line)}th{background:#eaf0e7;font-weight:600}tr:last-child td{border-bottom:0}td:last-child,th:last-child{text-align:right}strong{font-weight:650}.split{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.split div{background:white;border:1px solid var(--line);border-radius:8px;padding:17px}.split strong{font-size:29px;color:var(--green);display:block;line-height:1.3}.split span{font-size:13px;color:var(--muted)}.receipt{padding:16px 20px;background:#eaf0e7;border-radius:8px;display:flex;justify-content:space-between;gap:10px}.receipt strong{font-size:21px}.rules{margin:0;padding-left:22px;font-size:14px}.rules li{padding:5px 0}.formula{background:#eaf0e7;padding:18px 20px;border-radius:8px;margin:17px 0;font-size:14px;overflow-wrap:anywhere}.formula p{margin:5px 0}.footnote{color:var(--muted);font-size:12px;margin-top:12px}.status{font-size:12px;color:var(--green);min-height:20px;text-align:right}.footer{padding:24px 0 35px;color:var(--muted);font-size:12px}.print-link{display:none}
-@media(max-width:640px){main{padding:0 18px}.top{padding:12px 18px}.brand{font-size:20px}button{font-size:12px;padding:6px 9px}.hero{padding-top:32px}.hero p{font-size:16px}.grid{grid-template-columns:1fr}.split{grid-template-columns:repeat(2,1fr)}.nav{gap:20px}.flow{padding:18px;gap:9px;font-size:14px}h2{font-size:23px}.card{padding:19px}th,td{padding:11px 12px}.receipt{font-size:14px}.receipt strong{font-size:18px}}
+.split{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+@media(max-width:640px){main{padding:0 18px}.top{padding:12px 18px}.brand{font-size:20px}button{font-size:12px;padding:6px 9px}.hero{padding-top:32px}.hero p{font-size:16px}.grid{grid-template-columns:1fr}.split{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:20px}.flow{padding:18px;gap:9px;font-size:14px}h2{font-size:23px}.card{padding:19px}th,td{padding:11px 12px}.receipt{font-size:14px}.receipt strong{font-size:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{body{background:white;color:#111;font-size:11pt}header,.nav,.status{display:none}main{max-width:none;padding:0}.hero{padding:10px 0 20px}.hero h1{font-size:30px}.flow{background:#eee;color:#111}.flow b{color:#555}section{padding:20px 0}.card,.table-wrap,.formula,.split{break-inside:avoid}.print-link{display:block;overflow-wrap:anywhere}a{text-decoration:none}}
 </style>
@@ -15,7 +16,7 @@
 <body>
 <header><div class="top"><a class="brand" href="#">FXP <span>/ V5</span></a><div class="actions"><button id="print">保存 PDF</button><button id="share" class="primary">分享链接</button></div></div></header>
 <main>
-<div class="hero"><div class="label">V5 方案说明 · 尚未上线</div><h1>功能与运营模式</h1><p>扫码支付 · 消费算力 · 节点分红</p><div class="meta">版本 2.0 · 2026 年 11 月 16 日</div></div>
+<div class="hero"><div class="label">V5 方案说明 · 尚未上线</div><h1>功能与运营模式</h1><p>扫码支付 · 消费算力 · 节点分红</p><div class="meta">版本 2.1 · 2026 年 11 月 16 日</div></div>
 <nav class="nav" aria-label="页面目录"><a href="#payment">支付收款</a><a href="#funds">资金分配</a><a href="#power">算力规则</a><a href="#rewards">产币分红</a><a href="#transition">权益衔接</a></nav>
 <div class="status" id="status" role="status" aria-live="polite"></div>
 <section id="payment"><h2><small>01</small>支付与收款</h2>
@@ -24,8 +25,9 @@
 <p class="footnote">支付不等待奖励日结；已有足够授权时不重复授权。付款结果核实后显示成功，中途退出可恢复原订单。</p></section>
 <section id="funds"><h2><small>02</small>资金分配</h2><p>每笔消费统一让利 <strong>10%</strong>。以支付 <strong>100 USDT</strong> 为例：</p>
 <div class="receipt"><span>商户实际收款</span><strong>90 USDT</strong></div>
-<div class="split"><div><strong>1%</strong><span>基金会 · 1 USDT</span></div><div><strong>2%</strong><span>买币补矿池 · 2 USDT</span></div><div><strong>3%</strong><span>节点分红 · 3 USDT</span></div><div><strong>4%</strong><span>国库池 · 4 USDT</span></div></div>
-<p class="sub">买币资金用于买入 FXP 并补充支付矿池，不等同于添加双边 LP 流动性。</p></section>
+<div class="split"><div><strong>1%</strong><span>基金会 · 1 USDT</span></div><div><strong>2%</strong><span>买币补矿池 · 2 USDT</span></div><div><strong>3%</strong><span>节点分红 · 3 USDT</span></div><div><strong>3.5%</strong><span>国库池 · 3.5 USDT</span></div><div><strong>0.5%</strong><span>技术维护池 · 0.5 USDT</span></div></div>
+<p class="sub">买币资金用于买入 FXP 并补充支付矿池，不等同于添加双边 LP 流动性。</p>
+<p class="sub">技术维护池从原国库份额划出，用于技术维护、基础设施、安全审查与版本迭代；独立记账、多签管理，资金用途公开。商户总让利仍为 10%。</p></section>
 <section id="power"><h2><small>03</small>算力规则</h2>
 <div class="table-wrap"><table><thead><tr><th scope="col">来源</th><th scope="col">计算方式</th></tr></thead><tbody>
 <tr><td>消费者基础算力</td><td>消费 1 USDT＝1 算力</td></tr>
@@ -54,7 +56,7 @@
 </main>
 <script>
 const statusEl=document.getElementById('status');
-document.getElementById('share').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.origin+location.pathname+'?v=2');statusEl.textContent='链接已复制。'}catch{statusEl.textContent='请复制浏览器地址栏中的链接分享。'}});
+document.getElementById('share').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.origin+location.pathname+'?v=2.1');statusEl.textContent='链接已复制。'}catch{statusEl.textContent='请复制浏览器地址栏中的链接分享。'}});
 window.addEventListener('beforeprint',()=>{document.getElementById('print-url').textContent=location.href});
 document.getElementById('print').addEventListener('click',()=>window.print());
 </script>
